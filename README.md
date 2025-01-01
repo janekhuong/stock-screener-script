@@ -27,14 +27,22 @@ pip install pandas yfinance sys
 
 ## Usage
 
-1. Run the script:
+1. Run the script with the following arguments:
    ```bash
-   python screener.py
+   python screener.py <command>
    ```
 
-2. Follow the prompts to choose the sorting criteria (e.g., price, percentage change, volume, or market cap).
+   - `<command>`: Specifies the sorting criteria. Options include:
+     - `price`: Sorts stocks by price from highest to lowest.
+     - `-price`: Sorts stocks by price from lowest to highest.
+     - `change`: Sorts stocks by percentage change from highest to lowest.
+     - `-change`: Sorts stocks by percentage change from lowest to highest.
+     - `volume`: Sorts stocks by volume from highest to lowest.
+     - `-volume`: Sorts stocks by volume from lowest to highest.
+     - `marketcap`: Sorts stocks by market cap from highest to lowest.
+     - `-marketcap`: Sorts stocks by market cap from lowest to highest.
 
-3. The script will fetch the top 50 stocks from the S&P 500, sort them based on the chosen criteria, and display the results.
+2. The script will fetch the top 50 stocks from the S&P 500, sort them based on the chosen criteria, and display the results.
 
 ## Example
 
@@ -43,9 +51,9 @@ python screener.py marketcap
 ```
 Output:
 ```
-Top 50 S&P 500 Stocks Sorted by Market Cap:
-1. AAPL - $2.87T
-2. MSFT - $2.42T
+Ticker  Price  Change %    Volume Market Cap
+  AAPL 250.42     -0.71 1,306,971     3.79 T
+ GOOGL 189.30     -1.01   942,183     2.32 T
 ...
 ```
 
